@@ -4,7 +4,7 @@ class matrix{
         for (let i = 0; i < x; ++i){
             this.matrix[i] = new Int8Array(y);
             for (let j = 0; j < y; ++j){
-                this.matrix[i][j] = i*x+j+i+1;
+                this.matrix[i][j] = 0; //i*x+j+i+1;
             }
         }
     }
@@ -24,6 +24,7 @@ class matrix{
                 arr[i][j]=this.matrix[j][i];
             }
         }
+        this.matrix.length = 0;
         for (let index in arr) {
             this.matrix[index] = this.getTypedArrayWithOptimizedSize(...arr[index]);
         }
