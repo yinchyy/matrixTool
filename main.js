@@ -47,6 +47,10 @@ document.getElementById("createMatrix").addEventListener("click", () => {
             settings[1] = "column";
         }
         document.querySelector("style").innerHTML = `
+        .content{
+            width: 40vw;
+            height: 100vh;
+        }
         .matrixField{
             display: flex;
             flex-direction: row;
